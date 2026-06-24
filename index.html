@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>para neisa 🌻</title>
+    <style>
+        body {
+            background-color: #f7f1e3; /* Un fondo crema suave que hace resaltar el amarillo */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #container {
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #d35400; /* Un color anaranjado/marrón cálido */
+            font-size: 2.8em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            opacity: 0; 
+            animation: fadeIn 2s ease-in-out 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Contenedor del girasol */
+        .flower-box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Estilos del Girasol */
+        .stem {
+            stroke: #2ecc71;
+            stroke-width: 8;
+            stroke-linecap: round;
+        }
+
+        .center {
+            fill: #795548; /* Marrón del centro */
+            stroke: #5d4037;
+            stroke-width: 2;
+        }
+
+        /* Animación de los pétalos */
+        .petal {
+            fill: #ffce00;
+            stroke: #e67e22;
+            stroke-width: 0.5;
+            transform-origin: 150px 150px; /* El centro exacto del SVG */
+            opacity: 0;
+            animation: openUp 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes openUp {
+            0% {
+                transform: scale(0) rotate(var(--rot));
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1) rotate(var(--rot));
+                opacity: 1;
+            }
+        }
+
+        /* Partículas Brillantes ✨ */
+        .sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle, #ffffff 0%, rgba(255,255,255,0) 70%);
+            box-shadow: 0 0 10px #fff, 0 0 20px #fffa65;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            animation: flyUp 4s linear infinite;
+        }
+
+        @keyframes flyUp {
+            0% {
+                transform: translateY(150px) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-200px) translateX(var(--mdx)) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1> Neisa para ti, esto es por preciosa</h1>
+
+        <div class="flower-box" id="flowerBox">
+            <svg viewBox="0 0 300 300">
+                <line class="stem" x1="150" y1="150" x2="150" y2="280" />
+                
+                <path d="M150,220 Q120,200 110,220 Q130,240 150,220" fill="#2ecc71" />
+                <path d="M150,190 Q180,170 190,190 Q170,210 150,190" fill="#2ecc71" />
+
+                <g id="petals-layer">
+                    <path class="petal" style="--rot: 0deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 15deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 30deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 45deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 60deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 75deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 90deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 105deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 120deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 135deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 150deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 165deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 180deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 195deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 210deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 225deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 240deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 255deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 270deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 285deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 300deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 315deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 330deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                    <path class="petal" style="--rot: 345deg;" d="M150,150 C140,100 145,40 150,40 C155,40 160,100 150,150" />
+                </g>
+
+                <circle class="center" cx="150" cy="150" r="35" />
+                <circle cx="150" cy="150" r="25" fill="none" stroke="#4e342e" stroke-width="3" stroke-dasharray="4,4" />
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        // Sistema de brillos ✨ mejorado fuera del SVG para que no falle
+        const box = document.getElementById('flowerBox');
+        
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            
+            // Posición horizontal aleatoria dentro de la caja del girasol
+            const randomX = Math.random() * 200 + 50; 
+            // Dirección aleatoria hacia la izquierda o derecha mientras sube
+            const moveX = (Math.random() - 0.5) * 150; 
+            // Retraso de tiempo al azar para que salgan fluidas
+            const delay = Math.random() * 3;
+
+            sparkle.style.left = `${randomX}px`;
+            sparkle.style.bottom = `100px`; // Salen desde el centro/tallo aproximado
+            sparkle.style.setProperty('--mdx', `${moveX}px`);
+            sparkle.style.animationDelay = `${delay}s`;
+
+            box.appendChild(sparkle);
+
+            // Se borran solas al terminar para no trabar la página
+            setTimeout(() => {
+                sparkle.remove();
+            }, 5000);
+        }
+
+        // Generar las primeras partículas
+        for(let i=0; i<30; i++) {
+            createSparkle();
+        }
+
+        // Seguir generando brillos todo el tiempo
+        setInterval(createSparkle, 200);
+    </script>
+</body>
+</html>
